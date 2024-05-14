@@ -1,0 +1,14 @@
+<%= user.username %> 
+(<%= user.user_type %>) 
+
+<form action='/admin/promoteToAdmin' method="post" style="display:inline;">
+  <input type="hidden" name="email" value="<%= user.email %>">
+  <button class="btn btn-danger rounded-pill px-3" style="font-size:12px; margin-bottom: 7px;" type="submit">Promote to Admin</button>
+</form>
+
+<form action='/admin/demoteToUser' method="post" style="display:inline;">
+  <input type="hidden" name="email" value="<%= user.email %>">
+  <button class="btn btn-success rounded-pill px-3" style="font-size: 12px; margin-bottom: 7px" type="submit">Demote to User</button> 
+</form>
+
+<br>
